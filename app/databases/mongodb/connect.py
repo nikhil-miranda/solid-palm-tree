@@ -7,7 +7,7 @@ from app.models.arsenal import models
 MONGODB_DAAS_URI = "mongodb+srv://nikhilmiranda:vtTtF9mipllnscl3@purple-parrot.slcsytn.mongodb.net/"
 
 # creating a client
-mongo_client = MongoClient(MONGODB_DAAS_URI)
+mongo_client = MongoClient(MONGODB_DAAS_URI, ssl=True)
 
 
 def connection(database: str, collection: str):

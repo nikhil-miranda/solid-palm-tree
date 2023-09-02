@@ -1,8 +1,4 @@
 from pymongo import MongoClient
-from pydantic import BaseModel
-from bson import ObjectId
-
-from app.models.arsenal import models
 
 MONGODB_DAAS_URI = "mongodb+srv://nikhilmiranda:vtTtF9mipllnscl3@purple-parrot.slcsytn.mongodb.net/"
 

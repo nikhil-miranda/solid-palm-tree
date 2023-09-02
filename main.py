@@ -1,11 +1,10 @@
 from fastapi import FastAPI
-from fastapi.exceptions import RequestValidationError
 from starlette.middleware.cors import CORSMiddleware
-
-from app.routers import router as router
-
+from starlette.responses import PlainTextResponse
 
 from app.core.events import create_start_app_handler, create_stop_app_handler
+from app.routers import router as router
+
 
 def get_application() -> FastAPI:
     application = FastAPI(
@@ -33,6 +32,26 @@ def get_application() -> FastAPI:
 app = get_application()
 
 
-@app.get("/health")
+@app.get("/")
 def root():
+    text_content = """
+    
+    
+                                             |
+                      |                      |
+                      |                    -/_\-
+                    -/_\-   ______________(/ . \)______________
+       ____________(/ . \)_____________    \___/          <>
+          <>        \___/         <>
+
+              Iceman: "You can be my wingman any time."
+              Maverick: "Bull----! You can be mine." 
+     
+    """
+
+    return PlainTextResponse(content=text_content)
+
+
+@app.get("/health")
+def health():
     return {"message": "I am Alive !!"}

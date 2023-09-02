@@ -1,7 +1,5 @@
-from typing import Callable, Any, Coroutine
-
 from fastapi import FastAPI
-from loguru import logger
+
 
 # from app.databases import database
 # from app.databases.events import connect_to_db, close_db_connection

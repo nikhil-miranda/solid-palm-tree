@@ -152,6 +152,10 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Database
+*.sqlite3
+*.db
+
 # IDEs
 .idea/
 .vscode/

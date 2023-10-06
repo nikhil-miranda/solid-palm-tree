@@ -13,9 +13,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 
-# Dependency | THE FOLLOWING FUNCTION HAS BEEN DEPRECATED
-
-
+@DeprecationWarning
 def get_db():
     print("*** | THE FOLLOWING FUNCTION HAS BEEN DEPRECATED ON 5th SEPTEMBER 2022 | ***")
     # db = SessionLocal()

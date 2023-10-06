@@ -8,9 +8,10 @@ from app.routers import router as router
 
 def get_application() -> FastAPI:
     application = FastAPI(
-        title="solid-palm-tree",
-        debug=True,
-        version="0.1.0"
+        title="Owned by Nikhil Miranda",
+        debug=False,
+        version="1.1.3",
+        description="This is the host for backend services offered by the Portfolio Website of Nikhil Miranda."
     )
 
     application.add_middleware(
@@ -46,6 +47,10 @@ def root():
 
               Iceman: "You can be my wingman any time."
               Maverick: "Bull----! You can be mine." 
+              
+              version: 1.1.3
+              
+              
      
     """
 
@@ -54,4 +59,4 @@ def root():
 
 @app.get("/health")
 def health():
-    return {"message": "I am Alive !!"}
+    return {"message": "A live and healthy service."}

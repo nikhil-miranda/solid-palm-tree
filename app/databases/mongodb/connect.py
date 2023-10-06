@@ -1,6 +1,8 @@
+import os
+
 from pymongo import MongoClient
 
-MONGODB_DAAS_URI = "mongodb+srv://nikhilmiranda:vtTtF9mipllnscl3@purple-parrot.slcsytn.mongodb.net/"
+MONGODB_DAAS_URI = os.getenv("MONGO_DB_CONNECTION")
 
 # creating a client
 mongo_client = MongoClient(MONGODB_DAAS_URI, ssl=True)

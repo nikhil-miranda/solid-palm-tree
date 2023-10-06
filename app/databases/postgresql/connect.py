@@ -1,10 +1,9 @@
-import psycopg2
+import os
+
 import asyncpg
 
-DATABASE_URL = "postgres://nikhil.miranda:e03aYFQOgAwd@ep-sweet-wind-20949678.ap-southeast-1.aws.neon.tech/neondb"
+DATABASE_URL = os.getenv("POSTGRESQL_DB_CONNECTION")
 
 
 def connect():
     return asyncpg.connect(DATABASE_URL)
-
-

@@ -59,4 +59,6 @@ def root():
 
 @app.get("/health")
 def health():
-    return {"message": "A live and healthy service."}
+    return {"message": "An SQL statement walks into a bar and sees two tables. "
+                       "It approaches, and asks 'may I join you?'",
+            "status": "healthy"}

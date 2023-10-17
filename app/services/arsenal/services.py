@@ -16,7 +16,7 @@ def store_message(payload: models.Message):
     if payload.name is None and payload.email is None and payload.message is None:
         return {"message": "Details were sent empty."}
 
-    if payload.name is "string" and payload.email is "string" and payload.message is "string":
+    if payload.name == "string" and payload.email == "string" and payload.message == "string":
         return {"message": "Details were sent empty."}
 
     try:

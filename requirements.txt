@@ -5,7 +5,7 @@ click==8.1.5
 databases==0.7.0
 dnspython==2.4.2
 exceptiongroup==1.1.2
-fastapi==0.100.0
+fastapi==0.109.1
 gunicorn==21.2.0
 h11==0.14.0
 httptools==0.6.0
